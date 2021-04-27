@@ -296,7 +296,7 @@ h1, h2, h3, h4, h5, h6 {
 #hero {
   width: 100%;
   height: 80vh;
-  background: url("/assets/img/hero-bg.jpg") top right;
+  background: url("../img/hero-bg.jpg") top right;
   background-size: cover;
   position: relative;
 }
@@ -982,7 +982,7 @@ section {
 # Footer
 --------------------------------------------------------------*/
 #footer {
-  background: url("/assets/img/footer-bg.jpeg") top center no-repeat;
+  background: url("../img/footer-bg.jpeg") top center no-repeat;
   background-size: cover;
   color: #fff;
   font-size: 14px;
