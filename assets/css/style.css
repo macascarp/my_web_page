@@ -675,6 +675,7 @@ section {
 .resume .resume-item p {
   padding-left: 15px;
   margin-bottom: 0px;
+  line-height: 30px;
 }
 
 .resume .resume-item:last-child {
@@ -752,6 +753,17 @@ section {
 /*--------------------------------------------------------------
 # My Portfolio
 --------------------------------------------------------------*/
+
+.section-cons {
+  display: inline;
+  text-align: center;
+}
+
+.h1-const {
+  padding-bottom: 40px;
+  color: #a5a5a5;
+}
+
 .portfolio #portfolio-flters {
   list-style: none;
   margin-bottom: 20px;
