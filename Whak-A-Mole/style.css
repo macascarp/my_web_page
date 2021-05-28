@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box ;
+}
+
+body {
+    font-family: Helvetica, sans-serif;
+    background-color: rgb(150, 45, 123, 0.5);
+}
+
+.wrapper {
+    border: 1px solid black;
+    width: 1000px;/*800*/
+    height: 600px;/*500*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* Especifica una tanslación 2D dada por el vector [tx, ty]. */
+    transform: translate(-50%, -50%);
+    background-image: url(img/background.png);
+    overflow: hidden;
+    box-shadow: 10px 10px 5px gray;
+    border-radius: 15px;
+}
+
+.bar {
+    display: inline-block;
+    width: 100%;
+    height: 100px;
+}
+
+.score {
+    font-size: 90px;
+    color: #962d7b;
+    position:absolute;
+    top: 10%;
+    left: 50%;
+    /* Especifica una tanslación 2D dada por el vector [tx, ty]. */
+    transform: translate(-50%, -50%);
+    width: 200px;
+    text-align: center;
+    z-index: 100;
+}
+
+.countdown {
+    font-size: 30px;
+    text-align: right;
+    color:#962d7b;
+    padding: 50px;
+    background-color: rgb(245, 245, 245, .5);
+}
+
+button {
+        position: absolute;
+        top: 5%;
+        left: 10%;
+        background: #962d7b;
+        color: white;
+        padding: 20px 50px;
+        border-radius: 5px;
+        z-index: 200;
+        cursor: pointer;
+        border: none;
+        outline: none;
+    }
+
+.game {
+    width: 600px;
+    height: 400px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+/* Establece el orden de pila del elemento.
+Nos aseguramos que este por encima de todos los demas elementos. */
+    z-index: 200;
+/* Establece la longitud flexible en elementos flex. */
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.hole {
+/* Flex grow, shrink, bases.
+GROW cuánto crecerá el artículo en relación con el resto de los 
+artículos flexibles dentro del mismo contenedor.
+SHRINK cómo se encogerá el elemento en relación con el resto de los 
+elementos flexibles dentro del mismo contenedor.
+BASES especifica la longitud inicial de un artículo flexible. */
+        flex: 1 0 33.33%;
+        position: relative;
+        overflow: hidden;
+    }
+
+/* Quedara entre hole y el elemento siguiente. */
+.hole:after {
+/* Se usa con los pseudoelementos ::before y ::after,
+para insertar contenido generado. */
+        content: '';
+/* Para asegurar que aceptara width & height. */
+        display: block;
+        background-image: url(img/grass.png);
+        position: absolute;
+        width: 100%;
+        height: 70px;
+        z-index: 2;
+        bottom: -30px;
+/* Para asegurar que se muestre (display) toda la imagen. */
+        background-size: contain;
+    }
+
+.mole {
+    background-image: url(img/unicorn.png);
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 100%;
+    transition: 0.4s;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+.mole.small {
+    background-size: 60%;
+}
+
+.mole.large {
+    background-size: 80%;
+}
+
+/* Esto sirve solo con el JS */
+.hole.up .mole {
+    top:0;
+}

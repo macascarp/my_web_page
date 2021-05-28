@@ -807,17 +807,17 @@ section {
   left: 15px;
   bottom: 0;
   z-index: 3;
-  right: 15px;
+  right: 12px;
   transition: all ease-in-out 0.3s;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(184, 181, 181, 0.4);
   padding: 10px 15px;
+  border-radius: 5px;
 }
 
 .portfolio .portfolio-item .portfolio-info h4 {
   font-size: 18px;
-  color: #fff;
   font-weight: 600;
-  color: #fff;
+  color: white;
   margin-bottom: 0px;
 }
 
