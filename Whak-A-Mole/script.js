@@ -119,10 +119,10 @@ function startGame() {
         // Sumar un punto
         score++;
         // Cuando sale, mostrar la imagen
-        this.style.backgroundImage = 'url("/img/unicorn.png")';
+        this.style.backgroundImage = 'url("./img/unicorn.png")';
         setTimeout(function(){
         // Cuando se toca con el puntero que muestre otra (una que genere algun efecto de movimiento)
-            this.style.backgroundImage = 'url("/img/unicorn.png")';
+            this.style.backgroundImage = 'url("./img/unicorn.png")';
         }, 800);
         // Mostrar puntaje
         scoreBoard.textContent = score;
